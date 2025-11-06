@@ -78,3 +78,8 @@
 {"level":"info","message":"User admin@gmaill.com created successfully","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully: admin@gmaill.com","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [06/Nov/2025:09:48:06 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 102 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User admin@jsmastery.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User logged in successfully: admin@jsmastery.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [06/Nov/2025:10:17:05 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 104 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [06/Nov/2025:10:17:32 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 29 \"-\" \"HTTPie\"","service":"acquisitions-api"}
