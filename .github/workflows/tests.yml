@@ -1,0 +1,71 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      CI: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests with coverage
+        id: test
+        run: npm test -- --coverage
+        continue-on-error: true
+
+      - name: Upload coverage artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ github.sha }}
+          path: |
+            coverage/**
+            coverage/lcov.info
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Add annotations on failure
+        if: failure()
+        run: |
+          echo "::error title=Tests failed::One or more tests failed. Reproduce locally with 'npm test'. If using Jest + ESM, ensure NODE_OPTIONS='--experimental-vm-modules'."
+
+      - name: Step summary
+        if: always()
+        run: |
+          echo "## Test run summary" >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ steps.test.outcome }}" = "success" ]; then
+            echo "- Status: passed" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- Status: failed" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f coverage/lcov.info ]; then
+            echo "- Coverage: lcov artifact uploaded" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "- Coverage: artifact uploaded if generated" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Fail if tests failed
+        if: ${{ steps.test.outcome == 'failure' }}
+        run: exit 1
