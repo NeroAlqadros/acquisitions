@@ -310,3 +310,61 @@
 {"level":"info","message":"::1 - - [11/Nov/2025:10:46:48 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [11/Nov/2025:10:47:18 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [11/Nov/2025:10:47:49 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:29:46 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:30:17 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:30:47 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:30:48 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:31:17 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:31:18 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:31:48 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:31:55 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:32:18 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:32:23 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:32:36 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:32:36 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:34:06 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:34:09 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:34:37 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:35:07 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:35:37 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:36:04 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:36:09 +0000] \"GET /api/users HTTP/1.1\" 200 651 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:36:34 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:36:56 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:36:56 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:37:26 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:37:36 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"error","message":"Error getting users,e","service":"acquisitions-api"}
+{"level":"error","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:37:37 +0000] \"GET /api/users HTTP/1.1\" 500 1061 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users ...","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [11/Nov/2025:12:37:44 +0000] \"GET /api/users HTTP/1.1\" 200 651 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:37:45 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [11/Nov/2025:12:38:15 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api"}

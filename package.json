@@ -5,7 +5,7 @@
   "main": "index.js",
   "imports": {
     "#config/*": "./src/config/*",
-    "#constrollers/*": "./src/constrollers/*",
+    "#controllers/*": "./src/controllers/*",
     "#middleware/*": "./src/middleware/*",
     "#models/*": "./src/models/*",
     "#routes/*": "./src/routes/*",
