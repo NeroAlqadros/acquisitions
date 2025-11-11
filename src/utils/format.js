@@ -1,4 +1,4 @@
-export const formatValidationError=  errors => {
+export const formatValidationError = errors => {
   if (!errors || !errors.issues) return 'Validation failer!';
 
   if (Array.isArray(errors.issues))
@@ -6,7 +6,3 @@ export const formatValidationError=  errors => {
 
   return JSON.stringify(errors);
 };
-
-
-
-

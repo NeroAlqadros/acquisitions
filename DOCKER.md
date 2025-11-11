@@ -19,12 +19,14 @@ This guide explains how to run the Acquisitions application using Docker with Ne
 ### Architecture
 
 **Development Environment:**
+
 - Uses **Neon Local** proxy running in Docker
 - Creates ephemeral database branches automatically
 - Application connects to `neon-local:5432` inside the Docker network
 - Branch lifecycle tied to Docker container lifecycle
 
 **Production Environment:**
+
 - Connects directly to **Neon Cloud** database
 - No local proxy needed
 - Uses production-grade connection pooling
@@ -75,6 +77,7 @@ docker-compose -f docker-compose.dev.yml up -d
 ```
 
 This will:
+
 1. Start the **Neon Local** proxy container
 2. Create an ephemeral database branch from your parent branch
 3. Start your **application** container
@@ -88,6 +91,7 @@ This will:
 ### Step 4: Working with Neon Local
 
 **Ephemeral Branches (Default):**
+
 - A new branch is created each time you start the containers
 - The branch is deleted when you stop the containers (`DELETE_BRANCH=true`)
 - Perfect for clean testing environments
@@ -136,6 +140,7 @@ DATABASE_URL=postgres://user:password@ep-xxxxx-xxxxx.region.aws.neon.tech/neondb
 ```
 
 **⚠️ SECURITY WARNING:**
+
 - **NEVER commit `.env.production` with real credentials to Git**
 - In production, inject `DATABASE_URL` via your deployment platform:
   - GitHub Actions secrets
@@ -189,25 +194,25 @@ docker run -p 3000:3000 \
 
 ### Development (.env.development)
 
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `NODE_ENV` | Environment mode | Yes | `development` |
-| `PORT` | Application port | No | `3000` |
-| `LOG_LEVEL` | Logging level | No | `debug` |
-| `DATABASE_URL` | Neon Local connection | Yes | Set in compose |
-| `NEON_API_KEY` | Neon API key | Yes | - |
-| `NEON_PROJECT_ID` | Neon project ID | Yes | - |
-| `PARENT_BRANCH_ID` | Parent branch for ephemeral branches | No | Default branch |
-| `DELETE_BRANCH` | Delete branch on container stop | No | `true` |
+| Variable           | Description                          | Required | Default        |
+| ------------------ | ------------------------------------ | -------- | -------------- |
+| `NODE_ENV`         | Environment mode                     | Yes      | `development`  |
+| `PORT`             | Application port                     | No       | `3000`         |
+| `LOG_LEVEL`        | Logging level                        | No       | `debug`        |
+| `DATABASE_URL`     | Neon Local connection                | Yes      | Set in compose |
+| `NEON_API_KEY`     | Neon API key                         | Yes      | -              |
+| `NEON_PROJECT_ID`  | Neon project ID                      | Yes      | -              |
+| `PARENT_BRANCH_ID` | Parent branch for ephemeral branches | No       | Default branch |
+| `DELETE_BRANCH`    | Delete branch on container stop      | No       | `true`         |
 
 ### Production (.env.production)
 
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `NODE_ENV` | Environment mode | Yes | `production` |
-| `PORT` | Application port | No | `3000` |
-| `LOG_LEVEL` | Logging level | No | `info` |
-| `DATABASE_URL` | Neon Cloud connection | Yes | - |
+| Variable       | Description           | Required | Default      |
+| -------------- | --------------------- | -------- | ------------ |
+| `NODE_ENV`     | Environment mode      | Yes      | `production` |
+| `PORT`         | Application port      | No       | `3000`       |
+| `LOG_LEVEL`    | Logging level         | No       | `info`       |
+| `DATABASE_URL` | Neon Cloud connection | Yes      | -            |
 
 ---
 
@@ -284,6 +289,7 @@ rm -rf .neon_local
 ### Issue: Neon Local won't start
 
 **Solution:**
+
 1. Check your Neon credentials in `.env.development`
 2. Ensure port 5432 is not already in use
 3. Check Neon Local logs:
@@ -294,6 +300,7 @@ rm -rf .neon_local
 ### Issue: App can't connect to database
 
 **Solution:**
+
 1. Wait for Neon Local health check to pass:
    ```bash
    docker-compose -f docker-compose.dev.yml ps
@@ -307,6 +314,7 @@ rm -rf .neon_local
 ### Issue: Branch not deleted after stopping
 
 **Solution:**
+
 1. Check `DELETE_BRANCH` is set to `true` in `.env.development`
 2. Use `down` instead of `stop`:
    ```bash
@@ -316,6 +324,7 @@ rm -rf .neon_local
 ### Issue: SSL certificate errors in development
 
 **Solution:**
+
 - The Neon Local proxy uses self-signed certificates
 - The connection string includes `sslmode=require` which should work
 - If issues persist, add SSL config to your database client
@@ -323,6 +332,7 @@ rm -rf .neon_local
 ### Issue: Permission errors on Windows
 
 **Solution:**
+
 - Ensure Docker Desktop has access to your project directory
 - Check File Sharing settings in Docker Desktop
 - For `.git/HEAD` mount, ensure WSL2 integration is enabled
@@ -330,6 +340,7 @@ rm -rf .neon_local
 ### Issue: Hot reload not working in development
 
 **Solution:**
+
 - The `src` directory is mounted as a volume
 - Restart the app service:
   ```bash
